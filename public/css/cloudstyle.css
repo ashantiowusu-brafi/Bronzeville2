@@ -3,8 +3,10 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 2000px;
+  /* width: 100vw;
+  height: 100vh; */
+  /* width: 100%;
+  height: 2000px; */
 }
 
 html {
@@ -106,17 +108,6 @@ a {
 }
 
 /* now is where thee rest of the page's css comes in */
-/* .nav {
-  z-index: 0;
-  margin-top: 20em;
-  opacity: 0;
-}
-
-.nav a {
-  margin-left: 3em;
-  font-size: 18px;
-  color: white;
-} */
 
 .header-image {
   position: fixed;
@@ -209,15 +200,8 @@ a {
 }
 
 @media all and (orientation: portrait) {
-  .nav {
-    margin-top: 10%;
-  }
-
-  .nav a {
-    top: 10em;
-    margin-left: 40%;
-    font-size: 40px;
-    color: white;
+  body {
+    overflow: scroll;
   }
 
   .header-image img {
@@ -247,12 +231,57 @@ a {
     margin-left: 8%;
     font-size: 30px;
   }
-}
 
-@media all and (orientation: portrait) {
   .top-image {
     width: 100%;
-    height: 100%;
+  }
+
+  #instructions {
+    font-size: 3em;
+  }
+
+  .description {
+    margin: -2% 5%;
+    font-size: 3.5rem;
+    text-align: justify;
+  }
+
+  .inputs {
+    font-size: 3rem;
+    width: 40%;
+  }
+
+  .submit-div {
+    margin-top: 2%;
+  }
+  .submit-button {
+    margin-top: 1%;
+    font-size: 3rem;
+  }
+
+  .header-image img {
+    width: 100%;
+    margin-left: -18%;
+  }
+
+  .main-body {
+    margin-top: -10%;
+    margin-left: 25%;
+  }
+
+  #random-button {
+    font-size: 5rem;
+  }
+
+  #reload {
+    font-size: 5rem;
+    padding: 10px;
+    margin-left: -5%;
+  }
+
+  .bottom_nav a {
+    font-size: 3.5rem;
+    margin-left: 43%;
   }
 }
 
@@ -260,30 +289,10 @@ a {
   .top-image {
     width: 100%;
   }
-
-  .description {
-    margin: 20px 30px;
-  }
-
-  .inputs {
-    width: 30%;
-  }
-
-  .info {
-    font-size: 30px;
-  }
 }
 
 @media only screen and (min-width: 900px) {
   .description {
-    margin: 20px 50px;
-  }
-
-  .inputs {
-    width: 25%;
-  }
-
-  .info {
-    font-size: 40px;
+    /* margin: 20px 50px; */
   }
 }

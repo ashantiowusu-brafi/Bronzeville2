@@ -33,6 +33,7 @@ let ovalues = [
 ];
 
 window.addEventListener("load", () => {
+  // console.log(Math.max(window.innerHeight, document.body.clientHeight));
   //posts answers from submit button
   document.getElementById("submit").addEventListener("click", () => {
     console.log(
@@ -125,19 +126,6 @@ window.addEventListener("scroll", function () {
     mainbody.style.zIndex = 0;
   }
 
-  // let index = [];
-  // for (let i = 0; i < totalHeight; i += totalHeight / 3) {
-  //   index.push(i);
-  //   for (let i = 0; i < index.length; i++) {
-  //     neighborhood.value = nvalues[i];
-  //     place.value = pvalues[i];
-  //     sound.value = svalues[i];
-  //     smell.value = smvalues[i];
-  //     event.value = evalues[i];
-  //     object.value = ovalues[i];
-  //   }
-  // }
-
   if (currentY2 > 200 && currentY2 < 300) {
     instructions.innerHTML = "Here's What Your Neighbor Said";
     neighborhood.value = nvalues[0];
@@ -174,11 +162,29 @@ window.addEventListener("scroll", function () {
 });
 
 document.getElementById("reload").addEventListener("click", () => {
-  console.log("hi");
   maplibsdoc.style.opacity = fullH;
   mainbody.style.opacity = 0;
 
   mainbody.style.zIndex = 0;
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+});
+
+//touch for mobile
+maplibsdoc.addEventListener("touchstart", () => {
+  console.log("touch started");
+});
+
+maplibsdoc.addEventListener("touchend", () => {
+  maplibsdoc.style.opacity = 0;
+  maplibsdoc.style.opacity = 0;
+  mainbody.style.opacity = fullH;
+  mainbody.style.zIndex = 1;
+});
+
+mainbody.addEventListener("touchstart", () => {
+  console.log("touch ended");
+  maplibsdoc.style.opacity = 0;
+  mainbody.style.opacity = 1;
+  mainbody.style.zIndex = 1;
 });
