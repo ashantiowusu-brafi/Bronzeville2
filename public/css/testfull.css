@@ -234,4 +234,8 @@ p {
     margin-bottom: 5%;
     width: 15%;
   }
+
+  #full_des {
+    width: 80%;
+  }
 }

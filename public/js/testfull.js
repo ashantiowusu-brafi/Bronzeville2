@@ -133,6 +133,8 @@ let newsources = [glenance, azurii, susan, jarred, ezinwa, franklin, marcellus];
 
 let randomNumber = Math.floor(Math.random() * newsources.length);
 
+let opacity = false;
+
 window.addEventListener("load", () => {
   // console.log(video.autoplay);
 
@@ -156,9 +158,13 @@ window.addEventListener("load", () => {
   credit.appendChild(addcredit);
 
   text.addEventListener("mouseover", () => {
-    console.log("hello");
-    fullML.style.zIndex = 9;
-    fullML.style.opacity = 1;
+    opacity = !opacity;
+
+    if (opacity) {
+      fullML.style.zIndex = 9;
+      fullML.style.opacity = 1;
+    }
+
     addMLN.innerHTML = newsources[randomNumber].neighborhood;
     neighborhood.appendChild(addMLN);
     neighborhood.style.color = "lightblue";
@@ -194,6 +200,7 @@ window.addEventListener("load", () => {
 
   infoSpan.onclick = function () {
     hoverBox.style.display = "none";
+    opacity = true;
   };
 
   dragElement(document.getElementById("full_des"));
@@ -206,9 +213,11 @@ window.addEventListener("load", () => {
     if (document.getElementById(elmnt.id + "header")) {
       /* if present, the header is where you move the DIV from:*/
       document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+      document.getElementById(elmnt.id + "header").ontouchstart = dragMouseDown;
     } else {
       /* otherwise, move the DIV from anywhere inside the DIV:*/
       elmnt.onmousedown = dragMouseDown;
+      elmnt.ontouchstart = dragMouseDown;
     }
 
     function dragMouseDown(e) {
@@ -218,8 +227,11 @@ window.addEventListener("load", () => {
       pos3 = e.clientX;
       pos4 = e.clientY;
       document.onmouseup = closeDragElement;
+      document.ontouchend = closeDragElement;
       // call a function whenever the cursor moves:
       document.onmousemove = elementDrag;
+
+      document.ontouchmove = closeDragElement;
     }
 
     function elementDrag(e) {
@@ -239,6 +251,8 @@ window.addEventListener("load", () => {
       /* stop moving when mouse button is released:*/
       document.onmouseup = null;
       document.onmousemove = null;
+      // document.ontouchmove = null;
+      // document.ontouchend = null;
     }
   }
 });
@@ -272,7 +286,15 @@ reloadButton.addEventListener("click", () => {
   fullML.style.opacity = 0;
 
   text.addEventListener("mouseover", () => {
-    console.log("hello");
+    let hoverBox = document.getElementById("full_des");
+    hoverBox.style.display = "inline";
+    opacity = !opacity;
+
+    if (opacity) {
+      fullML.style.zIndex = 9;
+      fullML.style.opacity = 1;
+    }
+
     fullML.style.zIndex = 9;
     fullML.style.opacity = 1;
     addMLN.innerHTML = newsources[newRandom].neighborhood;
