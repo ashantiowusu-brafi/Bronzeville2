@@ -10,14 +10,10 @@ let email = document.getElementById("email");
 let reload = document.getElementById("reload");
 
 let nvalues = ["Bronzeville", "Oakland", "Oakwood Shores"];
-let pvalues = [
-  "Sip & Savor",
-  "Mandrake Park and the Oakwood Beach",
-  "Ellis Park",
-];
+let pvalues = ["Sip & Savor", "Mandrake Park and Oakwood Beach", "Ellis Park"];
 let svalues = [
   "The hum of conversation",
-  "Kids playing",
+  "families barbecuing",
   "People laughing and playing (not too loud) music",
 ];
 let smvalues = ["Coffee", "children playing and neighbors chatting", "nothing"];
@@ -27,7 +23,7 @@ let evalues = [
   "the real familial bonds that existed in the former Ida B Wells housing development",
 ];
 let ovalues = [
-  "Attractive, community-inspired light post",
+  "community-inspired light post",
   "Park",
   "green space and bench",
 ];
@@ -126,7 +122,7 @@ window.addEventListener("scroll", function () {
     mainbody.style.zIndex = 0;
   }
 
-  if (currentY2 > 200 && currentY2 < 300) {
+  if (currentY2 > 200 && currentY2 < 400) {
     instructions.innerHTML = "Here's What Your Neighbor Said";
     neighborhood.value = nvalues[0];
     place.value = pvalues[0];
@@ -134,7 +130,7 @@ window.addEventListener("scroll", function () {
     smell.value = smvalues[0];
     event.value = evalues[0];
     object.value = ovalues[0];
-  } else if (currentY2 > 300 && currentY2 < 400) {
+  } else if (currentY2 > 400) {
     instructions.innerHTML = "Here's What Your Neighbor Said";
     neighborhood.value = nvalues[1];
     place.value = pvalues[1];
@@ -142,14 +138,6 @@ window.addEventListener("scroll", function () {
     smell.value = smvalues[1];
     event.value = evalues[1];
     object.value = ovalues[1];
-  } else if (currentY2 > 400) {
-    instructions.innerHTML = "Here's What Your Neighbor Said";
-    neighborhood.value = nvalues[2];
-    place.value = pvalues[2];
-    sound.value = svalues[2];
-    smell.value = smvalues[2];
-    event.value = evalues[2];
-    object.value = ovalues[2];
   } else {
     instructions.innerHTML = "FILL IN THE BLANKS";
     neighborhood.value = "A NEIGHBORHOOD";

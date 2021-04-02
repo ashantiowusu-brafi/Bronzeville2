@@ -85,7 +85,7 @@ let jarred = {
   sound:
     "the whistle of the man from the apartment complex across the street looking for his cats",
   smell: "UNCLE J'S BAR B QUE",
-  history: "B QUE",
+  history: "Bud Billiken Parade",
   object: "community-run business",
 };
 
