@@ -28,7 +28,19 @@ let ovalues = [
   "green space and bench",
 ];
 
+let modInst = document.getElementById("modal_inst");
+let modal = document.getElementById("info-modal");
+let infoSpan = document.getElementById("info-span");
+
 window.addEventListener("load", () => {
+  //modal stuff
+  modInst.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  infoSpan.onclick = function () {
+    modal.style.display = "none";
+  };
   // console.log(Math.max(window.innerHeight, document.body.clientHeight));
   //posts answers from submit button
   document.getElementById("submit").addEventListener("click", () => {
@@ -139,7 +151,8 @@ window.addEventListener("scroll", function () {
     event.value = evalues[1];
     object.value = ovalues[1];
   } else {
-    instructions.innerHTML = "FILL IN THE BLANKS";
+    instructions.innerHTML =
+      "Maplibs is a word game about what makes your neighborhood feel like a community. Fill in the blanks!";
     neighborhood.value = "A NEIGHBORHOOD";
     place.value = "A PLACE";
     sound.value = "A SOUND";
