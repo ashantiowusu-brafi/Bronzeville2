@@ -7,6 +7,10 @@ let object = document.getElementById("object");
 let name = document.getElementById("name");
 let email = document.getElementById("email");
 
+let stepone = document.getElementById("first_inst");
+let steptwo = document.getElementById("sec_inst");
+let stepthree = document.getElementById("third_inst");
+
 let reload = document.getElementById("reload");
 
 let nvalues = ["Bronzeville", "Oakland", "Oakwood Shores"];
@@ -28,15 +32,15 @@ let ovalues = [
   "green space and bench",
 ];
 
-let modInst = document.getElementById("modal_inst");
+// let modInst = document.getElementById("modal_inst");
 let modal = document.getElementById("info-modal");
 let infoSpan = document.getElementById("info-span");
 
 window.addEventListener("load", () => {
   //modal stuff
-  modInst.onclick = function () {
-    modal.style.display = "block";
-  };
+  // modInst.onclick = function () {
+  //   modal.style.display = "block";
+  // };
 
   infoSpan.onclick = function () {
     modal.style.display = "none";
@@ -124,9 +128,11 @@ window.addEventListener("scroll", function () {
   maplibsdoc.style.opacity = currentH;
 
   if (currentY2 > 900) {
-    // navbar.style.opacity = fullH;
     mainbody.style.opacity = fullH;
     mainbody.style.zIndex = 1;
+    maplibsdoc.style.opacity = 0;
+
+    stepthree.innerHTML = "•";
   } else {
     // navbar.style.opacity = 0;
     mainbody.style.opacity = 0;
@@ -135,30 +141,38 @@ window.addEventListener("scroll", function () {
   }
 
   if (currentY2 > 200 && currentY2 < 400) {
-    instructions.innerHTML = "Here's What Your Neighbor Said";
+    instructions.innerHTML =
+      "Learn what your neighbors said in their word game";
     neighborhood.value = nvalues[0];
     place.value = pvalues[0];
     sound.value = svalues[0];
     smell.value = smvalues[0];
     event.value = evalues[0];
     object.value = ovalues[0];
+    stepone.innerHTML = "•";
   } else if (currentY2 > 400) {
-    instructions.innerHTML = "Here's What Your Neighbor Said";
+    instructions.innerHTML =
+      "Learn what your neighbors said in their word game";
     neighborhood.value = nvalues[1];
     place.value = pvalues[1];
     sound.value = svalues[1];
     smell.value = smvalues[1];
     event.value = evalues[1];
     object.value = ovalues[1];
+    steptwo.innerHTML = "•";
   } else {
     instructions.innerHTML =
-      "Maplibs is a word game about what makes your neighborhood feel like a community. Fill in the blanks!";
+      "Reflect on your community using the blank word game";
     neighborhood.value = "A NEIGHBORHOOD";
     place.value = "A PLACE";
     sound.value = "A SOUND";
     smell.value = "A SMELL";
     event.value = "AN EVENT";
     object.value = "AN OBJECT";
+
+    stepone.innerHTML = "°";
+    steptwo.innerHTML = "°";
+    stepthree.innerHTML = "°";
   }
 });
 

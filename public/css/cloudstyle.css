@@ -97,13 +97,28 @@ body {
   justify-content: center;
 }
 
+.top {
+  display: flex;
+}
+
 .top-image {
   width: 100%;
 }
 
 a {
-  color: black;
-  font-size: 20px;
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  margin-left: 7%;
+}
+
+.sidebar {
+  color: white;
+  font-size: 4em;
+  line-height: 1;
+  position: fixed;
+  top: 20%;
+  right: 10px;
 }
 
 .fill-in {
@@ -127,6 +142,7 @@ a {
 #instructions {
   margin-bottom: 5%;
 }
+
 .inputs {
   color: rgba(0, 0, 0, 0.527);
   font-family: "Coming Soon", cursive;
@@ -138,18 +154,20 @@ a {
 
 .submit-div {
   text-align: center;
-  margin-top: -2%;
+  margin-top: -3%;
 }
 
 .submit-button {
   font-family: "Coming Soon", cursive;
-  border: 1px solid black;
+  border: 2px solid white;
   color: black;
   background-color: rgba(0, 100, 200, 0.05);
   font-size: 20px;
   border-radius: 25px;
   width: 50%;
   padding: 10px;
+  margin-top: 1%;
+  margin-left: -5%;
 }
 
 .submit-button:hover {
@@ -186,7 +204,7 @@ a {
   border-radius: 25px;
   width: 125%;
   padding: 12px;
-  margin-left: -30%;
+  margin-left: -40%;
 }
 
 #random-button:hover {
@@ -211,11 +229,12 @@ a {
 }
 
 .bottom_nav {
-  display: inline-flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  background-color: rgba(255, 252, 255, 0.5);
-  border-top: 4px double rgb(23, 80, 172);
+  /* display: inline-flex; */
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  /* background-color: rgba(255, 252, 255, 0.5); */
+  /* border-top: 4px double rgb(23, 80, 172); */
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -233,7 +252,7 @@ a {
   font-size: 24px;
   color: rgb(23, 80, 172, 0.7);
   z-index: 2;
-  margin-left: 29%;
+  margin-left: 48%;
   cursor: pointer;
   /* left: 50%; */
   /* transform: translate(50%, 0); */
@@ -248,7 +267,7 @@ a {
   font-family: "Cormorant", serif;
   font-size: 25px;
   padding: 15px 20px;
-  margin-left: -80%;
+  margin-left: -100%;
 }
 
 #reload:hover {
