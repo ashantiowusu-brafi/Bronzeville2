@@ -118,29 +118,26 @@ window.addEventListener("scroll", function () {
 
   if (currentY2 > 0 && lastScrollTop <= currentY2) {
     lastScrollTop = currentY2;
-    // console.log("scrolling down");
   } else {
-    // console.log("scrolling up");
   }
   lastScrollTop = currentY2;
   // console.log(window.scrollY, totalHeight, currentH);
 
   maplibsdoc.style.opacity = currentH;
 
-  if (currentY2 > 900) {
+  if (currentY2 > 450) {
     mainbody.style.opacity = fullH;
     mainbody.style.zIndex = 1;
     maplibsdoc.style.opacity = 0;
 
-    stepthree.innerHTML = "•";
+    stepthree.innerHTML = "●";
   } else {
-    // navbar.style.opacity = 0;
     mainbody.style.opacity = 0;
 
     mainbody.style.zIndex = 0;
   }
 
-  if (currentY2 > 200 && currentY2 < 400) {
+  if (currentY2 > 150 && currentY2 < 300) {
     instructions.innerHTML =
       "Learn what your neighbors said in their word game";
     neighborhood.value = nvalues[0];
@@ -149,8 +146,8 @@ window.addEventListener("scroll", function () {
     smell.value = smvalues[0];
     event.value = evalues[0];
     object.value = ovalues[0];
-    stepone.innerHTML = "•";
-  } else if (currentY2 > 400) {
+    stepone.innerHTML = "●";
+  } else if (currentY2 > 300 && currentY2 < 450) {
     instructions.innerHTML =
       "Learn what your neighbors said in their word game";
     neighborhood.value = nvalues[1];
@@ -159,7 +156,7 @@ window.addEventListener("scroll", function () {
     smell.value = smvalues[1];
     event.value = evalues[1];
     object.value = ovalues[1];
-    steptwo.innerHTML = "•";
+    steptwo.innerHTML = "●";
   } else {
     instructions.innerHTML =
       "Reflect on your community using the blank word game";
@@ -170,9 +167,9 @@ window.addEventListener("scroll", function () {
     event.value = "AN EVENT";
     object.value = "AN OBJECT";
 
-    stepone.innerHTML = "°";
-    steptwo.innerHTML = "°";
-    stepthree.innerHTML = "°";
+    stepone.innerHTML = "○";
+    steptwo.innerHTML = "○";
+    stepthree.innerHTML = "○";
   }
 });
 
