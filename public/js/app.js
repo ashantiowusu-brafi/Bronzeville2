@@ -32,15 +32,15 @@ let ovalues = [
   "green space and bench",
 ];
 
-// let modInst = document.getElementById("modal_inst");
+let modInst = document.getElementById("modal_inst");
 let modal = document.getElementById("info-modal");
 let infoSpan = document.getElementById("info-span");
 
 window.addEventListener("load", () => {
   //modal stuff
-  // modInst.onclick = function () {
-  //   modal.style.display = "block";
-  // };
+  modInst.onclick = function () {
+    modal.style.display = "block";
+  };
 
   infoSpan.onclick = function () {
     modal.style.display = "none";
@@ -100,6 +100,8 @@ let navbar = document.getElementById("nav");
 let about = document.getElementById("about");
 let mainbody = document.getElementById("mainbody");
 
+let scroll_arrow = document.getElementById("scroll_arrow");
+
 let currentH, fullH;
 //change transparency based on scroll value
 //mapLib pdf goes to 0
@@ -125,16 +127,18 @@ window.addEventListener("scroll", function () {
 
   maplibsdoc.style.opacity = currentH;
 
-  if (currentY2 > 445) {
+  if (currentY2 > 545) {
     mainbody.style.opacity = fullH;
     mainbody.style.zIndex = 1;
     maplibsdoc.style.opacity = 0;
+    scroll_arrow.style.opacity = 0;
 
-    stepthree.innerHTML = "●";
+    // stepthree.innerHTML = "●";
   } else {
     mainbody.style.opacity = 0;
 
     mainbody.style.zIndex = 0;
+    scroll_arrow.style.opacity = 1;
   }
 
   if (currentY2 > 150 && currentY2 < 300) {
@@ -157,6 +161,16 @@ window.addEventListener("scroll", function () {
     event.value = evalues[1];
     object.value = ovalues[1];
     steptwo.innerHTML = "●";
+  } else if (currentY2 > 450 && currentY2 < 550) {
+    instructions.innerHTML =
+      "Learn what your neighbors said in their word game";
+    neighborhood.value = nvalues[1];
+    place.value = pvalues[1];
+    sound.value = svalues[1];
+    smell.value = smvalues[1];
+    event.value = evalues[1];
+    object.value = ovalues[1];
+    stepthree.innerHTML = "●";
   } else {
     instructions.innerHTML =
       "Reflect on your community using the blank word game";
