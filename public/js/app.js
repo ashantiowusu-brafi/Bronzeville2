@@ -125,7 +125,7 @@ window.addEventListener("scroll", function () {
 
   maplibsdoc.style.opacity = currentH;
 
-  if (currentY2 > 450) {
+  if (currentY2 > 445) {
     mainbody.style.opacity = fullH;
     mainbody.style.zIndex = 1;
     maplibsdoc.style.opacity = 0;
@@ -147,7 +147,7 @@ window.addEventListener("scroll", function () {
     event.value = evalues[0];
     object.value = ovalues[0];
     stepone.innerHTML = "●";
-  } else if (currentY2 > 300 && currentY2 < 450) {
+  } else if (currentY2 > 295 && currentY2 < 450) {
     instructions.innerHTML =
       "Learn what your neighbors said in their word game";
     neighborhood.value = nvalues[1];
