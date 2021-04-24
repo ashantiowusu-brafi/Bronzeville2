@@ -55,21 +55,35 @@ body {
 }
 
 .main {
+  display: flex;
   margin-top: -3%;
 }
 
 h1 {
   color: white;
   /* margin-top: 3em; */
-  font-size: 4em;
+  font-size: 2em;
   text-align: center;
   font-weight: 400;
 }
 
-.author-block {
+.project-block {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  top: 35%;
-  left: 45%;
+  top: 17%;
+  left: 10%;
+  width: 50%;
+  text-align: left;
+  font-weight: 500;
+}
+
+.author-block {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 17%;
+  left: 50%;
   width: 60%;
   text-align: left;
   font-weight: 500;
@@ -85,6 +99,10 @@ p {
   margin-top: 20px;
   font-size: 18px;
   width: 70%;
+}
+
+p a {
+  color: rgb(170, 1, 80);
 }
 
 .author-block a {
