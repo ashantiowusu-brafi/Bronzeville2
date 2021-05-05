@@ -30,13 +30,13 @@ body {
 .popup-image {
   position: fixed;
   margin-left: 8%;
-  margin-top: -4%;
+  margin-top: 1%;
   z-index: -5;
   width: 50%;
 }
 
 .popup-words {
-  margin-top: 40%;
+  margin-top: 47%;
 }
 
 .popup-words p {
@@ -135,7 +135,7 @@ a {
 }
 
 .maplib_box {
-  margin-top: 5%;
+  margin-top: 7%;
 }
 
 .fill-in {
