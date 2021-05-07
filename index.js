@@ -3,6 +3,14 @@ let app = express();
 let bodyParser = require("body-parser");
 app.use(bodyParser.json());
 
+if (process.env.NODE_ENV === "production") {
+  app.use((req, res, next) => {
+    if (req.header("x-forwarded-proto") !== "https")
+      res.redirect(`https://${req.header("host")}${req.url}`);
+    else next();
+  });
+}
+
 const { Parser } = require("json2csv");
 let json2csvParser = new Parser();
 
