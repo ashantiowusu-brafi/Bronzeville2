@@ -143,7 +143,7 @@ window.addEventListener("scroll", function () {
 
   if (currentY2 > 150 && currentY2 < 300) {
     instructions.innerHTML =
-      "Learn what your neighbors said in their word game";
+      "Learn about where your neighbors feel a sense of community";
     neighborhood.value = nvalues[0];
     place.value = pvalues[0];
     sound.value = svalues[0];
@@ -153,7 +153,7 @@ window.addEventListener("scroll", function () {
     stepone.innerHTML = "●";
   } else if (currentY2 > 295 && currentY2 < 450) {
     instructions.innerHTML =
-      "Learn what your neighbors said in their word game";
+      "Learn about where your neighbors feel a sense of community";
     neighborhood.value = nvalues[1];
     place.value = pvalues[1];
     sound.value = svalues[1];
@@ -163,7 +163,7 @@ window.addEventListener("scroll", function () {
     steptwo.innerHTML = "●";
   } else if (currentY2 > 450 && currentY2 < 550) {
     instructions.innerHTML =
-      "Learn what your neighbors said in their word game";
+      "Learn about where your neighbors feel a sense of community";
     neighborhood.value = nvalues[1];
     place.value = pvalues[1];
     sound.value = svalues[1];
@@ -172,8 +172,7 @@ window.addEventListener("scroll", function () {
     object.value = ovalues[1];
     stepthree.innerHTML = "●";
   } else {
-    instructions.innerHTML =
-      "Reflect on your community using the blank word game";
+    instructions.innerHTML = "Reflect on your neighborhood ";
     neighborhood.value = "A NEIGHBORHOOD";
     place.value = "A PLACE";
     sound.value = "A SOUND";

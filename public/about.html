@@ -19,32 +19,38 @@
     </div>
 
     <div class="main">
-    <!-- <img id="square" src="Images/white_back.png"></img> -->
-    <div class="shape"></div>
+      <!-- <img id="square" src="Images/white_back.png"></img> -->
+      <div class="shape"></div>
       <div class="project-block">
         <h1>about the project</h1>
         <p>
-          The Maplibs Project is a living atlas of the spaces that make our
-          neighborhood feel like a community. The project does more than catalog
-          these sites of community. Stretching conventional notions of maps and
-          mapping, it draws on the sensory dimension of space to explore what
-          community feels like for you. The Maplibs project is a front porch for
+          The Maplibs Project is a living atlas of the spaces that make us feel,
+          remember and imagine community in greater Bronzeville neighborhoods.
+          We gather residents to more inclusively pursue a shared vision for the
+          future of the built environment. Inspired by the word game Mad Libs,
+          the project invites you to reflect on your community by playing a word
+          game. The game lets players fill in key parts of a story about
+          community in their neighborhood using words of particular senses.
+          Stretching conventional notions of maps and mapping, the project
+          invites you to submit sounds, photos and videos of your view of
+          community. The collection of media submissions explores the moments of
+          memory making and imagining. The Maplibs Project is a porch for
           neighborhood memory, experience and imagination. You can play the word
-          game <a href="index.html">here.</a> You can also leave a voicemail or
-          text your answers to 312-869-2584. If you are interested in learning
-          more or creating the next edition of the word game about your
-          neighborhood, you can reach her by
+          game
+          <a href="index.html">here.</a> You can also leave a voicemail or text
+          your answers to 312-869-2584. If you are interested in learning more
+          or creating the next edition of the word game about your neighborhood,
+          you can reach her by
           <a href="mailto:cchristmasrouse@gmail.com">email.</a> Thank you to
           space-makers, space-keepers and everyone who shared their videos of
           spaces for us all to connect to in this online portal.
           <!-- <img id="bMap" src="Images/black.png"></img> -->
         </p>
       </div>
-      <div class="author-block">
-        <h1>about the artist</h1>
 
+      <div class="author-block">
         <p>
-          <img class="headshot" src="Images/update_headshot.jpeg"></img>
+          <img class="headshot" src="Images/update_headshot.jpeg" />
           Chandra Christmas-Rouse is an urban planner and interdisciplinary
           artist. A background in community development and environmental
           justice informs her design approach of working with communities in a
@@ -65,8 +71,9 @@
           from Duke University and an MA in Urban Planning from the Harvard
           University Graduate School of Design.
         </p>
+        <h1>about the artist</h1>
       </div>
-      <!-- <img class="headshot" src="Images/PlaceholderMap.jpeg" /> -->
+      <div><br /><br /></div>
     </div>
 
     <script src="js/threeJS/ga.js"></script>
@@ -170,7 +177,7 @@
         texture.magFilter = THREE.LinearMipMapLinearFilter;
         texture.minFilter = THREE.LinearMipMapLinearFilter;
 
-        var fog = new THREE.Fog(0xD586AB, -500, 2000);
+        var fog = new THREE.Fog(0xd586ab, -500, 2000);
 
         material = new THREE.ShaderMaterial({
           uniforms: {

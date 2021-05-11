@@ -30,16 +30,17 @@ body {
 .popup-image {
   position: fixed;
   margin-left: 8%;
-  margin-top: 1%;
+  margin-top: 2%;
   z-index: -5;
   width: 50%;
 }
 
 .popup-words {
-  margin-top: 47%;
+  margin-top: 45%;
 }
 
 .popup-words p {
+  margin-top: 1%;
   line-height: 1.5em;
 }
 
@@ -190,7 +191,7 @@ a {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* now is where thee rest of the page's css comes in */
+/* now is where the rest of the page's css comes in */
 
 .header-image {
   position: fixed;
@@ -235,6 +236,15 @@ a {
   background-color: rgba(0, 0, 0, 0.15);
   color: white;
   font-size: 15px;
+}
+
+.statue_image {
+  z-index: -2;
+  margin-top: -34%;
+  margin-left: 1%;
+  position: fixed;
+  width: 98%;
+  opacity: 0.8;
 }
 
 .footer {
