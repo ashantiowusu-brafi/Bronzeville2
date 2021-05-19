@@ -1,8 +1,9 @@
+//variables for content display (do not change)
 //randomize videos
 let video = document.getElementById("video");
 let audio = document.getElementById("audio");
 let source = document.createElement("source");
-//lefthand person's thing
+//lefthand person's mapLib
 let text = document.getElementById("description");
 let fullML = document.getElementById("full_des");
 let addtext = document.createElement("p");
@@ -13,6 +14,7 @@ let description = document.getElementById("sentence");
 let adddes = document.createElement("p");
 let isMuted;
 
+//objects for the person's MapLib
 let neighborhood = document.getElementById("neighborhood");
 let place = document.getElementById("place");
 let sound = document.getElementById("sound");
@@ -26,21 +28,16 @@ let addMLSM = document.createElement("p");
 let addMLE = document.createElement("p");
 let addMLO = document.createElement("p");
 
+//CHANDRA THIS IS WHERE YOU ADD NEW MAPLIBS
+//'let' is a global variable, which let's you use it anywhere in the code.
+//Start the person's MapLip by writing "let {name} ="
+//Then just copy the format of the rest, replacing the text after 'text', 'src', ...."
+//add the new ones after marcellus
 let glenance = {
   text: "glenance's place",
   src: "Assets/Sip Savor2_Place.mp4",
   des: "Sip & Savor",
   credit: "Credit: Toya Miller",
-  neighborhood: "Bronzeville",
-  place: "Sip & Savor",
-  sound: "the hum of conversation",
-  smell: "coffee",
-  history: "The Forum",
-  object: "Attractive, community-inspired light post",
-};
-
-//text example for glenance full maplib, might try to import from csv?
-let glenanceML = {
   neighborhood: "Bronzeville",
   place: "Sip & Savor",
   sound: "the hum of conversation",
@@ -89,20 +86,6 @@ let jarred = {
   object: "community-run business",
 };
 
-// let jarred2 = {
-//   text: "Jarred's little known history fact",
-//   des: "Bud Billiken Parade",
-//   src: "Assets/Bud Bilken Parade_History.mp4",
-//   credit: "Credit: James Harris",
-//   neighborhood: "Bronzeville",
-//   place: "Peach's",
-//   sound:
-//     "the whistle of the man from the apartment complex across the street looking for his cats",
-//   smell: "Uncle J's Bar B Que.",
-//   history: "BUD BILLIKEN PARADE",
-//   object: "community-run business",
-// };
-
 let franklin = {
   text: "franklin's sounds",
   des: "Kids playing",
@@ -129,16 +112,15 @@ let marcellus = {
   object: "garbage cans, no loitering, and a comfortable presence.",
 };
 
+//CHANDRA also add the new name of the MapLip to this array below.
+//Type a comma, then the name of the variable you declared above"
 let newsources = [glenance, azurii, susan, jarred, franklin, marcellus];
 
+//DON'T TOUCH BELOW!
 let randomNumber = Math.floor(Math.random() * newsources.length);
-
 let opacity = false;
 
 window.addEventListener("load", () => {
-  // video.width = innerWidth;
-  // video.height = innerHeight;
-
   source.setAttribute("src", newsources[randomNumber].src);
   // console.log(randomNumber);
 
@@ -146,7 +128,6 @@ window.addEventListener("load", () => {
   video.load();
 
   addtext.innerHTML = newsources[randomNumber].text;
-  // console.log(addtext.innerHTML);
   text.appendChild(addtext);
 
   adddes.innerHTML = newsources[randomNumber].des;
