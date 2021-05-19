@@ -35,7 +35,7 @@ let addMLO = document.createElement("p");
 //add the new ones after marcellus
 let glenance = {
   text: "glenance's place",
-  src: "Assets/Sip Savor2_Place.mp4",
+  src: "Assets/Videos/Sip Savor2_Place.mp4",
   des: "Sip & Savor",
   credit: "Credit: Toya Miller",
   neighborhood: "Bronzeville",
@@ -49,7 +49,7 @@ let glenance = {
 let azurii = {
   text: "azurii's place",
   des: " MANDRAKE PARK",
-  src: "Assets/Mandrake Park2_Place.mp4",
+  src: "Assets/Videos/Mandrake Park2_Place.mp4",
   credit: "Credit: Pastor Michael Neal",
   neighborhood: "Oakland",
   place: "Mandrake Park",
@@ -62,7 +62,7 @@ let azurii = {
 let susan = {
   text: "susan's little known history fact",
   des: "Black Excellence",
-  src: "Assets/Black Excellence Elder_History.mp4",
+  src: "Assets/Videos/Black Excellence Elder_History.mp4",
   credit: "Credit: Kathy Chaney",
   neighborhood: "Bronzeville",
   place: "neighborhood gatherings and support local businesses",
@@ -75,7 +75,7 @@ let susan = {
 let jarred = {
   text: "jarred's smells",
   des: "Uncle J's Bar B Que",
-  src: "Assets/Uncle Js_Smells.mp4",
+  src: "Assets/Videos/Uncle Js_Smells.mp4",
   credit: "Credit: Uncle J's Bar B Que",
   neighborhood: "Bronzeville",
   place: "Peach's",
