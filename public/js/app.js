@@ -196,20 +196,27 @@ document.getElementById("reload").addEventListener("click", () => {
 });
 
 //touch for mobile
-maplibsdoc.addEventListener("touchstart", () => {
-  console.log("touch started");
-  maplibsdoc.style.opacity = 0;
-});
+// maplibsdoc.addEventListener("touchstart", () => {
+//   if (modal.style.display == "none") {
+//     maplibsdoc.style.opacity = 0;
+//     mainbody.style.zIndex = 1;
+//     mainbody.style.opacity = 1;
+//   }
+// });
 
-maplibsdoc.addEventListener("touchend", () => {
-  maplibsdoc.style.opacity = 0;
-  mainbody.style.zIndex = 1;
-  mainbody.style.opacity = 1;
-});
+// maplibsdoc.addEventListener("touchend", () => {
+//   if (modal.style.display == "none") {
+//     maplibsdoc.style.opacity = 0;
+//     mainbody.style.zIndex = 1;
+//     mainbody.style.opacity = 1;
+//   }
+// });
 
-mainbody.addEventListener("touchstart", () => {
-  mainbody.style.opacity = 1;
-});
+// mainbody.addEventListener("touchstart", () => {
+//   if (modal.style.display == "none") {
+//     mainbody.style.opacity = 1;
+//   }
+// });
 
 // mainbody.addEventListener("touchend", () => {
 //   mainbody.style.opacity = 1;

@@ -292,13 +292,44 @@ a {
 }
 
 @media all and (orientation: portrait) {
+  canvas {
+    height: 2000px;
+  }
   body {
     overflow: scroll;
   }
 
+  .modal-content h1 {
+    font-size: 5em;
+  }
+
+  .modal-content p {
+    font-size: 4em;
+  }
+
+  .close {
+    float: left;
+    font-size: 5em;
+  }
+
   .header-image img {
-    width: 70%;
+    width: 50%;
     height: 100%;
+  }
+
+  #top {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    font-size: 3em;
+    margin-left: 25%;
+    margin-top: 15%;
+    text-align: center;
+  }
+
+  .sidebar {
+    font-size: 4em;
+    line-height: 4.5em;
   }
 
   .button {
@@ -334,8 +365,8 @@ a {
 
   .description {
     margin: -2% 5%;
-    font-size: 3.5rem;
-    text-align: justify;
+    font-size: 3rem;
+    /* text-align: justify; */
   }
 
   .inputs {
@@ -357,12 +388,15 @@ a {
   }
 
   .main-body {
-    margin-top: -10%;
+    position: fixed;
+    bottom: 0px;
+    margin-top: -15%;
     margin-left: 25%;
   }
 
   #random-button {
     font-size: 5rem;
+    margin-top: -5%;
   }
 
   #reload {
