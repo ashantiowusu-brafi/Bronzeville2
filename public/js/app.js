@@ -113,7 +113,7 @@ window.addEventListener("scroll", function () {
   let currentY2 = window.scrollY;
   // let scrollFromTop = window.pageYOffset;
 
-  let totalHeight = 1000;
+  let totalHeight = window.innerHeight;
 
   currentH = Math.round(100 - (currentY2 / totalHeight) * 100) + "%";
   fullH = Math.round((currentY2 / totalHeight) * 100) + "%";

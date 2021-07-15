@@ -292,6 +292,10 @@ a {
 }
 
 @media all and (orientation: portrait) {
+  html {
+    height: 3000px;
+  }
+
   canvas {
     height: 2000px;
   }
